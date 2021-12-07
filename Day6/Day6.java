@@ -12,6 +12,7 @@ public class Day6 {
         for (String s: sc.nextLine().split(",")) {
             arr.add(Integer.parseInt(s));
         }
+        
         part1(arr);
         part2(arr);
     }
