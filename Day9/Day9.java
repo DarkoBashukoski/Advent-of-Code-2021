@@ -37,7 +37,6 @@ public class Day9 {
                 if (j < input.get(i).size() - 1) {
                     if (input.get(i).get(j+1) <= c) {continue;}
                 }
-                System.out.println(c);
                 output += (int) c - 47;
             }
         }
