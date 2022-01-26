@@ -1,13 +1,13 @@
-package Day6;
+package Day06;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Day6 {
+public class Day06 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("Day6/day6.txt"));
+        Scanner sc = new Scanner(new File("Day06/day06.txt"));
         ArrayList<Integer> arr = new ArrayList<>();
         for (String s: sc.nextLine().split(",")) {
             arr.add(Integer.parseInt(s));
@@ -26,7 +26,7 @@ public class Day6 {
     private static void part2(ArrayList<Integer> input) {
         FishSchool fish = new FishSchool(input);
         fish.passDays(256);
-        System.out.printf("Part 1 Solution: %d\n", fish.getFishCount());
+        System.out.printf("Part 2 Solution: %d\n", fish.getFishCount());
     }
 }
 

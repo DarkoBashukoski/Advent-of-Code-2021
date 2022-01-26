@@ -1,13 +1,13 @@
-package Day1;
+package Day01;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Day1 {
+public class Day01 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("Day1/day1.txt"));
+        Scanner sc = new Scanner(new File("Day01/day01.txt"));
         ArrayList<Integer> arr = new ArrayList<>();
         while (sc.hasNext()) {
             arr.add(sc.nextInt());

@@ -1,4 +1,4 @@
-package Day5;
+package Day05;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,9 +7,9 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Day5 {
+public class Day05 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("Day5/day5.txt"));
+        Scanner sc = new Scanner(new File("Day05/day05.txt"));
         ArrayList<String> arr = new ArrayList<>();
         while (sc.hasNext()) {
             arr.add(sc.nextLine());

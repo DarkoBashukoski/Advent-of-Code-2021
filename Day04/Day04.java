@@ -1,4 +1,4 @@
-package Day4;
+package Day04;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Day4 {
+public class Day04 {
     public static void main(String[] args) throws FileNotFoundException {
         ArrayList<Integer> draws = new ArrayList<>();
         ArrayList<Bingo> bingos = new ArrayList<>();
 
-        Scanner sc = new Scanner(new File("Day4/day4.txt"));
+        Scanner sc = new Scanner(new File("Day04/day04.txt"));
         for (String s: sc.nextLine().split(",")) {
             draws.add(Integer.parseInt(s));
         }

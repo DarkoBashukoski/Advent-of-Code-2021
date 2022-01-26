@@ -1,4 +1,4 @@
-package Day9;
+package Day09;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,9 +8,9 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class Day9 {
+public class Day09 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("Day9/day9.txt"));
+        Scanner sc = new Scanner(new File("Day09/day09.txt"));
         List<List<Character>> arr = new ArrayList<>();
         while (sc.hasNext()) {
             arr.add(sc.nextLine().chars().mapToObj((i) -> Character.valueOf((char)i)).collect(Collectors.toList()));

@@ -1,4 +1,4 @@
-package Day7;
+package Day07;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Day7 {
+public class Day07 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("Day7/day7.txt"));
+        Scanner sc = new Scanner(new File("Day07/day07.txt"));
         ArrayList<Integer> arr = new ArrayList<>();
         for (String s: sc.nextLine().split(",")) {
             arr.add(Integer.parseInt(s));
