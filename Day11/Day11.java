@@ -40,7 +40,7 @@ public class Day11 {
         while (!step(input)) {
             stepNum++;
         }
-        System.out.printf("Part 1 Solution: %d\n", stepNum);
+        System.out.printf("Part 2 Solution: %d\n", stepNum);
     }
 
     private static boolean step(int[][] input) {
