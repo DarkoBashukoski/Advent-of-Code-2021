@@ -37,13 +37,13 @@ public class Day12 {
 
     private static void part1(Map<String, List<String>> map) {
         paths = 0;
-        traverse(map, "start", "end", new HashSet<>());
+        traverse(map, "start", "end", new HashSet<>(), new HashSet<>(), true);
         System.out.printf("Part 1 Solution: %d\n", paths);
     }
 
     private static void part2(Map<String, List<String>> map) {
         paths = 0;
-        traversePart2(map, "start", "end", new HashSet<>(), new HashSet<>(), false);
+        traverse(map, "start", "end", new HashSet<>(), new HashSet<>(), false);
         System.out.printf("Part 2 Solution: %d\n", paths);
     }
 
@@ -51,22 +51,7 @@ public class Day12 {
         return cave.equals(cave.toLowerCase());
     }
 
-    private static void traverse(Map<String, List<String>> map, String start, String end, Set<String> visited) {
-        if (start.equals(end)) {
-            paths++;
-            return;
-        }
-        if (isSmallCave(start)) {
-            visited.add(start);
-        }
-        for (String s: map.get(start)) {
-            if (!visited.contains(s)) {
-                traverse(map, s, end, new HashSet<>(visited));
-            }
-        }
-    }
-
-    private static void traversePart2(Map<String, List<String>> map, String start, String end, Set<String> visited, Set<String> visitedSmallCaves, boolean visitedTwice) {
+    private static void traverse(Map<String, List<String>> map, String start, String end, Set<String> visited, Set<String> visitedSmallCaves, boolean visitedTwice) {
         if (start.equals(end)) {
             paths++;
             return;
@@ -89,7 +74,7 @@ public class Day12 {
         
         for (String s: map.get(start)) {
             if (!visited.contains(s)) {
-                traversePart2(map, s, end, new HashSet<>(visited), new HashSet<>(visitedSmallCaves), visitedTwice);
+                traverse(map, s, end, new HashSet<>(visited), new HashSet<>(visitedSmallCaves), visitedTwice);
             }
         }
     }
