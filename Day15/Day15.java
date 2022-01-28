@@ -39,9 +39,6 @@ public class Day15 {
                 largeMap[i][j] = ((map[i%map.length][j%map[0].length] + i/map.length + j/map[0].length - 1) % 9) + 1;
             }
         }
-        for (int[] a: largeMap) {
-            System.out.println(Arrays.toString(a));
-        }
         Position end = new Position(largeMap.length-1, largeMap[0].length-1, 0, null, null);
         Position start = new Position(0, 0, largeMap[0][0], null, end);
         System.out.printf("Part 2 Solution: %d\n", aStar(largeMap, start, end));
